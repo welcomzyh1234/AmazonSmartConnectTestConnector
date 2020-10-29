@@ -1,0 +1,85 @@
+<div class="col mb-4">
+    <div id="getInventory" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API getInventory</h2>
+        </div>
+        <div>
+            <h4>Header Parameters</h4>
+            <div>
+                <label for="getInventory-X-Amz-Access-Token">X-Amz-Access-Token</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The LWA access token for authorizing the request"></i>
+                <input id="getInventory-X-Amz-Access-Token" class="rounded amz-access-token-input" >
+            </div>
+        </div>
+        <div>
+            <h4>Query Parameters</h4>
+            <div>
+                <label for="getInventory-skuId">skuId</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the SKU whose inventory details are being fetched"></i>
+                <input id="getInventory-skuId" class="rounded"  value="testwi1" >
+            </div>
+            <div>
+                <label for="getInventory-locationId">locationId</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the location whose inventory details are being fetched"></i>
+                <input id="getInventory-locationId" class="rounded" value="d12661cd-5c76-4867-84bd-34b717366cc5" >
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button  class="btn btn-secondary">Clear</button>
+            <button id="getInventory-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="updateInventory" class="text-white api-box card h-100">
+        <div>
+            <div class="api-title text-center">
+                <h2>API updateInventory</h2>
+            </div>
+            <div>
+                <h4>Header Parameters</h4>
+                <div>
+                    <label for="updateInventory-X-Amz-Access-Token">X-Amz-Access-Token</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The LWA access token for authorizing the request"></i>
+                    <input id="updateInventory-X-Amz-Access-Token" class="rounded amz-access-token-input" >
+                </div>
+            </div>
+            <div>
+                <h4>Query Parameters</h4>
+                <div>
+                    <label for="updateInventory-skuId">skuId</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The id of the SKU whose inventory details are being fetched"></i>
+                    <input id="updateInventory-skuId" class="rounded" value="testwi1" >
+                </div>
+                <div>
+                    <label for="updateInventory-locationId">locationId</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The id of the location whose inventory details are being fetched"></i>
+                    <input id="updateInventory-locationId" class="rounded" value="d12661cd-5c76-4867-84bd-34b717366cc5" >
+                </div>
+                <div>
+                    <label for="updateInventory-quantity">quantity</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: Integer"
+                        data-content="The absolute number of items of the specified SKU available at the specified location"></i>
+                    <input id="updateInventory-quantity" class="rounded" value="666" >
+                </div>
+                <!-- <div>
+                    <label for="updateInventory-inventoryUpdateSequence">inventoryUpdateSequence</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: Long/Int64"
+                        data-content="A unique number provided with each call to update the inventory. This number must always be a unique and increasing value per SKU per location for each inventory update. This is used by Amazon Yojaka to ensure the correct sequence of updates, especially if Amazon Yojaka receives near-concurrent inventory updates for the same SKU and same location. This has to be an integer, and not a floating point number"></i>
+                    <input id="updateInventory-inventoryUpdateSequence" class="rounded" >
+                </div> -->
+                <div class="text-right mt-auto mb-2 mr-2">
+                    <button  class="btn btn-secondary">Clear</button>
+                    <button  id="updateInventory-button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

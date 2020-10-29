@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seller Warehouse UI</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="js/AUWarehouseIntegrationTest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/AUWarehouseIntegrationTest.css">
+</head>
+
+<body class="bg-light">
+
+    <div id="amazon-root"></div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#inventories">Inventories APIs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#orders">Orders APIs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#prices">Prices APIs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#events">Events APIs</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active container" id="inventories">
+            <div class="row text-white apis-title">
+                <div class="col-4"></div>
+                <h1 class="col-4">Inventories APIs</h1>
+            </div>
+            <div id="inventories-row" class="row row-cols-md-2"></div>
+        </div>
+        <div class="tab-pane container" id="orders">
+            <div class="row text-white apis-title">
+                <div class="col-4"></div>
+                <h1 class="col-4">Orders APIs</h1>
+            </div>
+            <div id="orders-row" class="row row-cols-md-2"></div>
+        </div>
+        <div class="tab-pane container" id="prices">
+            <div class="row text-white apis-title">
+                <div class="col-4"></div>
+                <h1 class="col-4">Prices APIs</h1>
+            </div>
+            <div id="prices-row" class="row row-cols-md-2"></div>
+        </div>
+        <div class="tab-pane container" id="events">
+            <div class="row text-white apis-title">
+                <div class="col-4"></div>
+                <h1 class="col-4">Events APIs</h1>
+            </div>
+            <div id="events-row" class="row row-cols-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="lwa-div" class="row py-2">
+            <div class="text-white col-9 pt-1">
+                <div class="d-inline-block">
+                    <label for="amz-access-token-input">AMZ Access Token</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The LWA access token for authorizing the request"></i>
+                    <input id="amz-access-token-input" class="rounded amz-access-token-input">
+                </div>
+                <div id="amz-access-token-expiration-div" class="d-none">
+                    <label>Access Token Expiration: </label>
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-3 d-flex flex-row-reverse">
+                <button id="lwa-login-button" class="btn btn-primary" style="height: 40px;">Login</button>
+                <button id="lwa-refresh-button" class="btn btn-secondary mr-1" style="height: 40px;">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-none">
+        <span id="amz-authorization-code" class="d-block"></span>
+        <span id="amz-refresh-token" class="d-block"></span>
+    </div>
+</body>
+
+</html>
