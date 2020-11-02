@@ -1,0 +1,370 @@
+<div class="col mb-4">
+    <div id="getOrder" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API getOrder</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="getOrder-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="getOrder-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="getOrder-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="shipOrder" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API shipOrder</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="shipOrder-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="shipOrder-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="shipOrder-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="confirmOrder" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API confirmOrder</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="confirmOrder-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="confirmOrder-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="confirmOrder-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="rejectOrder" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API rejectOrder</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="rejectOrder-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="rejectOrder-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Body Parameters</h4>
+            <div>
+                <label for="rejectOrder-body">body*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="Stringfied JSON object, the object is described at https://docs.smartconnect.amazon.com/swagger/orders.html#api-OrderWorkflowProcessing-rejectOrder"></i>
+                <input id="rejectOrder-body" class="rounded" value='{"referenceId": "dummyId"}'>
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="rejectOrder-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="generateInvoice" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API generateInvoice</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="generateInvoice-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="generateInvoice-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="generateInvoice-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="retrieveInvoice" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API retrieveInvoice</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="retrieveInvoice-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="retrieveInvoice-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="retrieveInvoice-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="createPackages" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API createPackages</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="createPackages-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="createPackages-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Body Parameters</h4>
+            <div>
+                <label for="createPackages-body">body*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="Stringfied JSON object, the object is described at https://docs.smartconnect.amazon.com/swagger/orders.html#api-OrderWorkflowProcessing-createPackages"></i>
+                <input id="createPackages-body" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="createPackages-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="updatePackages" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API updatePackages</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="updatePackages-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="updatePackages-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Body Parameters</h4>
+            <div>
+                <label for="updatePackages-body">body*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="Stringfied JSON object, the object is described at https://docs.smartconnect.amazon.com/swagger/orders.html#api-OrderWorkflowProcessing-createPackages"></i>
+                <input id="updatePackages-body" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="updatePackages-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="generateShipLabel" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API generateShipLabel</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="generateShipLabel-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="generateShipLabel-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Query parameters</h4>
+            <div>
+                <label for="generateShipLabel-packageId">packageId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the package for which a ship-label is to be generated."></i>
+                <input id="generateShipLabel-packageId" class="rounded">
+            </div>
+            <div>
+                <label for="generateShipLabel-pickupTimeSlotId">pickupTimeSlotId</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the pickup time-slot that the seller chooses for the carrier to pick up the order. If the carrier does not support pick up time-slots, then this parameter need not be specified."></i>
+                <input id="generateShipLabel-pickupTimeSlotId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="generateShipLabel-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="regenerateShipLabel" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API regenerateShipLabel</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="regenerateShipLabel-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="regenerateShipLabel-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Query parameters</h4>
+            <div>
+                <label for="regenerateShipLabel-packageId">packageId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the package for which a ship-label is to be generated."></i>
+                <input id="regenerateShipLabel-packageId" class="rounded">
+            </div>
+            <div>
+                <label for="regenerateShipLabel-pickupTimeSlotId">pickupTimeSlotId</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the pickup time-slot that the seller chooses for the carrier to pick up the order. If the carrier does not support pick up time-slots, then this parameter need not be specified."></i>
+                <input id="regenerateShipLabel-pickupTimeSlotId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="regenerateShipLabel-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="retrieveShipLabel" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API retrieveShipLabel</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="retrieveShipLabel-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="retrieveShipLabel-orderId" class="rounded">
+            </div>
+        </div>
+        <div>
+            <h4>Query parameters</h4>
+            <div>
+                <label for="retrieveShipLabel-packageId">packageId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The id of the package for which a ship-label is to be generated."></i>
+                <input id="retrieveShipLabel-packageId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="retrieveShipLabel-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="listOrders" class="text-white api-box card h-100">
+        <div>
+            <div class="api-title text-center">
+                <h2>API listOrders</h2>
+            </div>
+            <div>
+                <h4>Query Parameters</h4>
+                <div>
+                    <label for="listOrders-locationId">locationId*</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The id of the location whose inventory details are being fetched"></i>
+                    <input id="listOrders-locationId" class="rounded" value="164576ba-ecc2-4d33-b5ad-f5468496941c">
+                </div>
+                <div>
+                    <label for="listOrders-status">status*</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: Integer"
+                        data-content="Use this parameter to filter orders in a particular state. The most common use-case would be to fetch all new orders from Amazon Yojaka using the ACCEPTED status. Valid values are ACCEPTED, CONFIRMED, PACKAGE_CREATED, PICKUP_SLOT_RETRIEVED, INVOICE_GENERATED, SHIPLABEL_GENERATED, SHIPPED, and CANCELLED."></i>
+                    <input id="listOrders-status" class="rounded">
+                </div>
+                <div>
+                    <label for="listOrders-fromTimestamp">fromTimestamp</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="Use this parameter to filter orders whose latest update in Amazon Yojaka is after a particular date/time. The value is specified as the number of milliseconds since epoch in the UTC timezone."></i>
+                    <input id="listOrders-fromTimestamp" class="rounded">
+                </div>
+                <div>
+                    <label for="listOrders-toTimestamp">toTimestamp</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="Use this parameter to filter orders whose latest update in Amazon Yojaka is before a particular date/time. The value is specified as the number of milliseconds since epoch in the UTC timezone"></i>
+                    <input id="listOrders-toTimestamp" class="rounded">
+                </div>
+                <div>
+                    <label for="listOrders-cursor">cursor</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="The cursor value returned from a previous call to list orders. Use this to retrieve the next page of orders."></i>
+                    <input id="listOrders-cursor" class="rounded">
+                </div>
+                <div>
+                    <label for="listOrders-maxResults">maxResults</label>
+                    <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                        data-content="Specify the maximum number of orders that are to be returned in the response. If omitted, this parameter defaults to 10."></i>
+                    <input id="listOrders-maxResults" class="rounded">
+                </div>
+                <div class="text-right mt-auto mb-2 mr-2">
+                    <button class="btn btn-secondary">Clear</button>
+                    <button id="listOrders-button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div id="retrievePickupSlots" class="text-white api-box card h-100 d-flex flex-column">
+        <div class="api-title text-center">
+            <h2>API retrievePickupSlots</h2>
+        </div>
+        <div>
+            <h4>Path parameters</h4>
+            <div>
+                <label for="retrievePickupSlots-orderId">orderId*</label>
+                <i class="fas fa-question-circle" data-toggle="popover" title="Type: String"
+                    data-content="The order's Amazon Yojaka assigned id."></i>
+                <input id="retrievePickupSlots-orderId" class="rounded">
+            </div>
+        </div>
+        <div class="text-right mt-auto mb-2 mr-2">
+            <button class="btn btn-secondary">Clear</button>
+            <button id="retrievePickupSlots-button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
