@@ -1,4 +1,4 @@
-const API_INVOKE_URL = 'https://ute4ohjjua.execute-api.us-west-2.amazonaws.com/prod';
+const API_INVOKE_URL = 'https://h418ebeyjk.execute-api.us-west-2.amazonaws.com/prod';
 const GET_HEADERS = function () {
     return {
         'Content-Type': 'application/json',
