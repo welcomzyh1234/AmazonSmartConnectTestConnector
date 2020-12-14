@@ -67,14 +67,14 @@
                     <label for="updateInventory-quantity">quantity</label>
                     <i class="fas fa-question-circle" data-toggle="popover" title="Type: Integer"
                         data-content="The absolute number of items of the specified SKU available at the specified location"></i>
-                    <input id="updateInventory-quantity" class="rounded" value="666" >
+                    <input id="updateInventory-quantity" class="rounded" >
                 </div>
-                <!-- <div>
+                <div>
                     <label for="updateInventory-inventoryUpdateSequence">inventoryUpdateSequence</label>
                     <i class="fas fa-question-circle" data-toggle="popover" title="Type: Long/Int64"
                         data-content="A unique number provided with each call to update the inventory. This number must always be a unique and increasing value per SKU per location for each inventory update. This is used by Amazon Yojaka to ensure the correct sequence of updates, especially if Amazon Yojaka receives near-concurrent inventory updates for the same SKU and same location. This has to be an integer, and not a floating point number"></i>
                     <input id="updateInventory-inventoryUpdateSequence" class="rounded" >
-                </div> -->
+                </div>
                 <div class="text-right mt-auto mb-2 mr-2">
                     <button  class="btn btn-secondary">Clear</button>
                     <button  id="updateInventory-button" class="btn btn-primary">Submit</button>

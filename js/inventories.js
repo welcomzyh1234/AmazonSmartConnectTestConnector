@@ -25,7 +25,8 @@ export function load_inventories_script() {
             data: JSON.stringify({
                 skuId: $('#updateInventory-skuId').val(),
                 locationId: $('#updateInventory-locationId').val(),
-                quantity: $('#updateInventory-quantity').val()
+                quantity: $('#updateInventory-quantity').val(),
+                inventoryUpdateSequence: $('#updateInventory-inventoryUpdateSequence').val()
             }),
             headers: constant.GET_HEADERS(),
             success: util.invokeApiSuccessCallback,
