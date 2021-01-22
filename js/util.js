@@ -3,7 +3,7 @@ export function enablePopover() {
 }
 
 export function invokeApiSuccessCallback(response, status, error) {
-    console.log('Successfully invoked API with response: ' + JSON.stringify(response))
+    alert('Successfully invoked API with response: ' + JSON.stringify(response))
 }
 
 export function invokeApiErrorCallback(response, status, error) {

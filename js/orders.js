@@ -1,7 +1,7 @@
 import * as util from './util.js';
 import * as constant from './constant.js'
 
-export function load_orders_script () {
+export function load_orders_script() {
     util.enablePopover();
 
     $('#confirmOrder-button').click(clickConfirmOrderButtonCallback);
@@ -80,7 +80,16 @@ function clickGenerateInvoiceButtonCallback() {
             orderId: $('#generateInvoice-orderId').val(),
         }),
         headers: constant.GET_HEADERS(),
-        success: util.invokeApiSuccessCallback,
+        success: (response, status, error) => {
+            util.invokeApiSuccessCallback
+            let pdfData = 'data:application/pdf;base64,' + response['fileData']['decryptedValue']
+            let newWindow = window.open('about:blank');
+            let image = new Image();
+            image.src = pdfData;
+            setTimeout(function () {
+                newWindow.document.write(image.outerHTML);
+            }, 0);
+        },
         error: util.invokeApiErrorCallback
     });
 }
@@ -181,7 +190,17 @@ function clickGenerateShipLabelButtonCallback() {
             pickupTimeSlotId: $('#generateShipLabel-pickupTimeSlotId').val()
         }),
         headers: constant.GET_HEADERS(),
-        success: util.invokeApiSuccessCallback,
+        success: (response, status, error) => {
+            util.invokeApiSuccessCallback
+            let format = response['fileData']['format']
+            let data = 'data:image/' + format + ';base64,' + response['fileData']['decryptedValue']
+            let newWindow = window.open('about:blank');
+            let image = new Image();
+            image.src = data;
+            setTimeout(function () {
+                newWindow.document.write(image.outerHTML);
+            }, 0);
+        },
         error: util.invokeApiErrorCallback
     });
 }
